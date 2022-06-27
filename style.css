@@ -5,6 +5,10 @@
     font-family: 'Rubik Mono One', sans-serif;
 }
 
+body, html{
+    overflow-x: hidden;
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
     width: 12px;
@@ -43,7 +47,7 @@
 
 .name-bg{
     background: rgb(10, 116, 109);
-    border-radius: 0 0 0 75px;
+    border-radius: 0 0 0 100px;
     margin-left: 10vw;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -52,13 +56,13 @@
 
 .portfolio-bg{
     margin-right: 10vw;
-    border-radius: 0 75px 75px 0;
+    border-radius: 0 100px 100px 0;
     justify-content: space-evenly;
 }
 
 .contact-bg{
     background: rgb(10, 116, 109);
-    border-radius: 75px 0 0 0;
+    border-radius: 100px 0 0 0;
     margin-left: 10vw;
     justify-content: center;
 }
