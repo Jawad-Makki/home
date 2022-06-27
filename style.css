@@ -119,6 +119,9 @@
 .site{
     font-size: min(2.5rem, 6vw);
     text-align: center;
+    background: white;
+    color: rgb(1, 12, 15);
+    font-weight: 100;
 }
 
 .contact{
