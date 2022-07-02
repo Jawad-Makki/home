@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow-x: hidden;
+}
+
+.start-screen-container{
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.start-screen-bg{
+    background: darkslategray;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.title{
+    cursor: default;
+    font-family: monospace;
+    font-size: min(15rem, 27vw);
+    color: white;
+    background: slategray;
+    border: 3px solid white;
+    width: 70%;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.home-btns-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 85%;
+    flex-wrap: wrap;
+}
+
+.play, .settings{
+    font-weight: bold;
+    border: 3px solid black;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 3% 5%;
+    width: 23rem;
+    text-align: center;
+    margin: 5% 3%;
+    font-size: min(3rem, 10vw);
+}
+
+.play:hover, .settings:hover, .mouse:hover, .keys:hover, .easy:hover, .medium:hover, .hard:hover, .dark:hover, .light:hover, .impossible:hover, .home-button:hover, .touch-btn:hover{
+    background: slategray;
+    border: 3px solid white;
+    color: white;
+}
+
+.set-screen-container{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.set-bg{
+    width: 100%;
+    min-height: 100vh;
+    background: darkslategray;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.controls-container, .diff-container, .disp-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 2%;
+}
+
+.back-button, .back-button-2{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    font-size: 2.5rem;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.controls, .display, .difficulty{
+    cursor: default;
+    text-decoration: underline;
+    color: white;
+    font-family: monospace;
+    font-size: min(15vw, 4rem);
+    margin-top: 15vh;
+    margin-bottom: 5vh;
+}
+
+.keys, .mouse, .easy, .medium, .hard, .impossible, .dark, .light, .start-game-button, .home-button, .touch-btn{
+    font-size: min(2rem, 8vw);
+    font-weight: bold;
+    background: whitesmoke;
+    border: 3px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 3% 2%;
+    margin: 2%;
+    width: min(15rem, 65vw);
+}
+
+.light{
+    margin-bottom: 10vh;
+}
+
+.keys, .dark, .easy{
+    background: slategray;
+    border: 3px solid white;
+    color: white;
+}
+
+.game-container{
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+ 
+canvas{
+    background: darkslategray;
+}
+
+.press-enter{
+    position: absolute;
+    top: 50%;
+    cursor: default;
+    background: slategray;
+    padding: 5px;
+    border-radius: 4px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    opacity: 0.8;
+    display: none;
+    margin-top: 8%;
+}
+
+.start-game-button{
+    display: none;
+    width: min(15rem, 65vw);
+    font-size: min(1.5rem, 8vw);
+    padding: 1%;
+    position: absolute;
+    top: 60%;
+    margin: 0;
+}
+
+.start-game-button:hover{
+    opacity: 0.5;
+}
+
+.pause-button{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 2.5rem;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.left-score, .right-score{
+    position: absolute;
+    font-size: 8rem;
+    font-family: monospace;
+    color: white;
+    font-weight: 250; 
+    opacity: 0.8;
+    top: 5%;
+}
+
+.left-score{
+    left: 25%;
+}
+.right-score{
+    right: 25%;
+}
+
+.end-screen-container{
+    display: none;
+    height: 100vh;
+    width: 100vw;
+}
+
+.end-screen-bg{
+    background: darkslategray;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.you-win, .you-lose{
+    color: white;
+    font-size: min(8rem, 30vw);
+    font-family: sans-serif;
+    display: none;
+    margin-bottom: 7%;
+    text-align: center;
+    padding: 1%;
+}
+
+.home-button{
+    padding: 0 2%;
+    font-size: min(3rem, 8vw);
+}
+
+
+@media all and (orientation:portrait) {
+    .left-score, .right-score{
+        font-size: 5rem;
+        right: 5%;
+    }
+
+    .left-score{
+        left: unset;
+        top: 25%;
+    }
+    .right-score{
+        top: unset;
+        bottom: 25%;
+    }
+}
