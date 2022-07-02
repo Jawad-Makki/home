@@ -757,11 +757,11 @@ function ballMovement() {
     }
 
     if(isDead === true){
-        if(keys === true){
+        if (keys === true) {
             pressEnter.style.display = "inline";
         }
     
-        if(mouse === true){
+        if (mouse === true || touchMode === true) {
             startGameButton.style.display = "inline";
         }
 
@@ -887,12 +887,14 @@ function pauseScreen(){
         pause = true;
         satisfied = true;
         pauseButton.innerHTML = `<i class="fa-solid fa-play"></i>`
+        clearInterval(ballSpeedIncrInt);
     }
 
     if(pause === true && satisfied === false && isDead === false){
         pause = false;
         satisfied = true;
         pauseButton.innerHTML = `<i class="fas fa-pause"></i>`;
+        ballSpeedIncrInt = setInterval(ballSpeedIncr, 6000);
     }
 }
 
@@ -905,7 +907,7 @@ function gameOver(){
         rightScore = 0;
     }
 
-    if(rightScore == 10 || rightScore == 1 && impossible === true){
+    if(rightScore == 10 && impossible != true || rightScore == 1 && impossible === true){
         endScreen.style.display = "flex";
         youWin.style.display = "inline";
         gameScreen.style.display = "none";
@@ -1012,7 +1014,7 @@ function handleTouchEvent(e) {
             rightY = touch.pageY - y/10;
         }
     } else {
-        if(touchMode === true && gameScreen.style.display === "flex" && 0 <= touch.pagetX - x/10 && touch.pageX - x/10 <= x - x/5 && pause === false){
+        if(touchMode === true && gameScreen.style.display === "flex" && 0 <= touch.pageX - x/10 && touch.pageX - x/10 <= x - x/5 && pause === false){
             rightX = touch.pageX - x/10;
         }
     }
