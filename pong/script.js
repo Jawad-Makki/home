@@ -1008,11 +1008,11 @@ function handleTouchEvent(e) {
     var touch = e.touches[0];
 
     if (x >= y) {
-        if(touchMode === true && gameScreen.style.display === "flex" && 0 <= e.clientY - y/10 && e.clientY - y/10 <= y - y/5 && pause === false){
+        if(touchMode === true && gameScreen.style.display === "flex" && 0 <= touch.pageY - y/10 && touch.pageY - y/10 <= y - y/5 && pause === false){
             rightY = touch.pageY - y/10;
         }
     } else {
-        if(touchMode === true && gameScreen.style.display === "flex" && 0 <= e.clientX - x/10 && e.clientX - x/10 <= x - x/5 && pause === false){
+        if(touchMode === true && gameScreen.style.display === "flex" && 0 <= touch.pagetX - x/10 && touch.pageX - x/10 <= x - x/5 && pause === false){
             rightX = touch.pageX - x/10;
         }
     }
