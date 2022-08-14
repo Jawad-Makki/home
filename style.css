@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body, html{
+    overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(32, 34, 36); 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(136, 165, 162); 
+    border-radius: 5px;
+    box-shadow: inset 0 0 4px rgba(0,0,0,0.3);
+    -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.3);
+}
+
+.name-container, .portfolio-container, .contact-container{
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.portfolio-container{
+    background: rgb(10, 116, 109);
+}
+
+.name-bg, .portfolio-bg, .contact-bg{
+    display: flex;
+    width: 90%;
+    background: white;
+    flex-wrap: wrap;
+}
+
+.name-bg{
+    background: rgb(10, 116, 109);
+    border-radius: 0 0 0 100px;
+    margin-left: 10vw;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.portfolio-bg{
+    margin-right: 10vw;
+    border-radius: 0 100px 100px 0;
+    justify-content: space-evenly;
+}
+
+.contact-bg{
+    background: rgb(10, 116, 109);
+    border-radius: 100px 0 0 0;
+    margin-left: 10vw;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.btns-container{
+    display: flex;
+    justify-content: space-between;
+    min-height: calc(3rem + 4%);
+}
+
+.red-blue, .dark-light{
+    min-height: calc(3rem + 4%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 5rem;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.dark-mode-btn, .light-mode-btn, .red-mode-btn, .blue-mode-btn{
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    margin-top: 5%;
+    margin-right: 5%;
+    cursor: pointer;
+}
+
+.red-mode-btn, .blue-mode-btn{
+    margin-left: 5%;
+    margin-right: 0;
+}
+
+.dark-mode-btn:hover, .light-mode-btn:hover, .red-mode-btn:hover, .blue-mode-btn:hover{
+    opacity: 0.7;
+}
+
+.dark-mode-btn{
+    background: rgb(1, 22, 27);
+}
+
+.red-mode-btn{
+    background: rgb(88, 2, 2);
+}
+
+.blue-mode-btn{
+    background: rgb(0, 255, 242);
+}
+
+.site-container{
+    width: min(15rem, 70vw);
+    height: min(15rem, 70vw);
+    margin: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.site{
+    font-size: min(2.5rem, 6vw);
+    text-align: center;
+    background: rgba(0, 0, 0, 0);
+    color: rgb(0, 48, 45);
+    font-weight: 100;
+    font-family: 'Rubik Mono One', sans-serif;
+    cursor: pointer;
+}
+
+.coding-for{
+    color: white;
+    font-size: min(4.5vw, 1.3rem);
+    font-weight: 550;
+    text-align: center;
+    margin-bottom: 5vh;
+    padding: 0 10%;
+}
+
+.all-info{
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.my-info{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2%;
+    padding-left: 7%;
+}
+
+.email{
+    color: white;
+    font-size: min(3rem, 10vw);
+    margin-bottom: 5%;
+    font-family: 'Rubik Mono One', sans-serif;
+    font-weight: 100;
+}
+
+.my-email{
+    color: white;
+    font-size: min(2rem, 5vw);
+    margin-bottom: 5%;
+    font-weight: 100;
+}
+
+.your-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2%;
+    padding-left: 7%;
+}
+
+.your-email, .your-message{
+    border: 2px solid black;
+    border-radius: 5px;
+    width: min(27rem, 60vw);
+    padding: 2% 4%;
+    font-size: min(1.3rem, 5vw);
+    margin-bottom: 3%;
+    background: white;
+    opacity: 0.8;
+}
+
+.your-message{
+    height: 12rem;
+    resize: none;
+}
+
+.your-email:focus, .your-message:focus{
+    outline: 0;
+    opacity: 1;
+}
+
+@media screen and (min-width: 1161px) {
+    .all-info{
+        justify-content: flex-start;
+    }
+}
