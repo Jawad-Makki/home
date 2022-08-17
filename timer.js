@@ -42,40 +42,40 @@ function updateTime(){
 }
 
 function differentMonths() {
-    if (totalDays <= 30) { // april
+    if (totalDays < 30) { // april
         months = 0;
         days = totalDays;
-    } else if (totalDays <= 61) { // may
+    } else if (totalDays < 61) { // may
         months = 1;
         days = totalDays - 30;
-    } else if (totalDays <= 91) { // june
+    } else if (totalDays < 91) { // june
         months = 2;
         days = totalDays - 61;
-    } else if (totalDays <= 122) { // july
+    } else if (totalDays < 122) { // july
         months = 3;
         days = totalDays - 91;
-    } else if (totalDays <= 153) { // august
+    } else if (totalDays < 153) { // august
         months = 4;
         days = totalDays - 122;
-    } else if (totalDays <= 183) { // september
+    } else if (totalDays < 183) { // september
         months = 5;
         days = totalDays - 153;
-    } else if (totalDays <= 214) { // october
+    } else if (totalDays < 214) { // october
         months = 6;
         days = totalDays - 183;
-    } else if (totalDays <= 244) { // november
+    } else if (totalDays < 244) { // november
         months = 7;
         days = totalDays - 214;
-    } else if (totalDays <= 275) { // december
+    } else if (totalDays < 275) { // december
         months = 8;
         days = totalDays - 244;
-    } else if (totalDays <= 306) { // january
+    } else if (totalDays < 306) { // january
         months = 9;
         days = totalDays - 275;
-    } else if (totalDays <= 334) { // february
+    } else if (totalDays < 334) { // february
         months = 10;
         days = totalDays - 306;
-    } else if (totalDays <= 365) { // march
+    } else if (totalDays < 365) { // march
         months = 11
         days = totalDays - 334;
     }
