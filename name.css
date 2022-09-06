@@ -27,10 +27,7 @@
     position: relative;
     top: -500%;
     cursor: pointer;
-}
-
-.name:focus{
-    background: rgb(0, 0, 0, 0);
+    -webkit-tap-highlight-color: rgb(0, 0, 0, 0);
 }
 
 @keyframes letter-drop {
