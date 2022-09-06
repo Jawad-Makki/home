@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="jm-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="name.css" rel="stylesheet" type="text/css"/>
+    <title>Home</title>
+</head>
+<body>
+    <div class="name-container">
+        <div class="name-bg">
+            <div class="btns-container">
+                <div class="dark-light">
+                    <button class="light-mode-btn" onclick="lightMode()"></button> 
+                    <button class="dark-mode-btn" onclick="darkMode()"></button>
+                </div>
+                <div class="red-blue">
+                    <button class="red-mode-btn" onclick="redMode()"></button>
+                    <button class="blue-mode-btn" onclick="blueMode()"></button>
+                </div>
+            </div>
+
+            <div class="title">
+                <div class="first-name">
+                    <h1 class="name" id="j">J</h1>
+                    <h1 class="name" id="a1">A</h1>
+                    <h1 class="name" id="w">W</h1>
+                    <h1 class="name" id="a2">A</h1>
+                    <h1 class="name" id="d">D</h1>
+                </div>
+                <div class="last-name">
+                    <h1 class="name" id="m">M</h1>
+                    <h1 class="name" id="a3">A</h1>
+                    <h1 class="name" id="k1">K</h1>
+                    <h1 class="name" id="k2">K</h1>
+                    <h1 class="name" id="i">I</h1>
+                </div>
+            </div>
+
+            <h2 class="developer">front end developer</h2>
+        </div>
+    </div>
+
+    <div class="portfolio-container">
+        <div class="portfolio-bg">
+            <!-- <div class="site-container">
+                <button class="site">Connections</button>
+            </div> -->
+            <div class="site-container">
+                <button class="site" onclick="window.location='./pong'">Pong</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-container">
+        <div class="contact-bg">
+            <div class="all-info">
+                <div class="my-info">
+                    <h3 class="email">Email</h3>
+                    <h3 class="my-email">jawadmakki321@gmail.com</h3>
+                </div>
+
+                <!-- <form action="https://formsubmit.co/jawadmakki321@gmail.com" method="POST" class="your-info">
+                    <input type="email" name="your-email" class="your-email">
+                    <input type="text" name="name">
+                    <button type="submit" class="send">Send</button>
+               </form> -->
+
+                <form 
+                    class="your-info"
+                    action="https://formspree.io/f/meqdegab"
+                    method="POST"
+                >   
+                    <input type="email" name="email" class="your-email" placeholder="Your Email">
+                    <textarea class="your-message" name="your-message" placeholder="Your Message"></textarea>
+                    <button type="submit" class="send">Send</button>
+                </form>
+            </div>
+            <h4 class="coding-for"></h4>
+        </div>
+    </div>
+
+    <script src="colors.js"></script>
+    <script src="timer.js"></script>
+    <script src="name.js"></script>
+</body>
+</html>
