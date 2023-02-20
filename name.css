@@ -1,0 +1,63 @@
+
+.title{
+    margin-top: min(40%, 8rem);
+    margin-bottom: min(20%, 4.5rem);
+    padding: 0 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.first-name{
+    display: flex;
+    padding: 0 3%;
+}
+
+.last-name{
+    display: flex;
+    padding: 0 3%;
+}
+
+.name{
+    font-size: min(6.5rem, 17vw);
+    color: white;
+    font-weight: 250;
+    font-family: 'Rubik Mono One', sans-serif;
+    user-select: none;
+    position: relative;
+    top: -500%;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgb(0, 0, 0, 0);
+}
+
+@keyframes letter-drop {
+    from {top: -500%;}
+    to {top: 0;}
+}
+
+@keyframes swoop-in-right {
+    from {left: 200%;}
+    to {left: 0;}
+}
+
+@keyframes letter-up {
+    0% {top: 0;}
+    100% {top: -15%;}
+}
+
+@keyframes letter-down {
+    0% {top: 0;}
+    100% {top: 15%;}
+}
+
+.developer{
+    font-size: min(6vw, 2.5rem);
+    padding: 0 5%;
+    color: white;
+    text-align: center;
+    user-select: none;
+    margin-bottom: 10%;
+    position: relative;
+    left: 200%;
+    animation: swoop-in-right 1s ease 2.2s 1 normal forwards;
+}
