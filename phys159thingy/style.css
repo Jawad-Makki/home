@@ -26,6 +26,10 @@ form{
     margin: 0.8rem;
 }
 
+label{
+    text-align: center;
+}
+
 input{
     border: 1px solid black;
     width: 100%;
