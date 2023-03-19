@@ -75,17 +75,6 @@ button{
     justify-content: center;
     margin-bottom: 2rem;
 }
-/* 
-@media only screen and (max-width: 500px) {
-    .mainContainer{
-        flex-direction: column;
-    }
-
-    .first{
-        margin-right: 0;
-        margin-bottom: 15px;
-    }
-} */
 
 .second{
     position: relative;
