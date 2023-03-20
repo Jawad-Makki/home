@@ -1,0 +1,107 @@
+/* 
+ * Author: Jawad Makki
+ * 
+ * Purpose: To make the style of my name look good, and the animations for the letters.
+ * 
+ */
+
+/* The div containing both the first and last name */
+#full-name{
+    margin-top: auto;
+    padding: 0 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+}
+
+/* The containers for the letters in the first name and the container for letters in the last name */
+.first-name, .last-name{
+    display: flex;
+    padding: 0 3%;
+}
+
+/* All of the individual letters */
+.first-name-letter, .last-name-letter{
+    font-size: min(6.5rem, 17vw);
+    color: white;
+    font-weight: 250;
+    font-family: 'Rubik Mono One', sans-serif;
+    user-select: none;
+    position: relative;
+    top: -700%;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgb(0, 0, 0, 0);
+
+}
+
+/* Full stack developer element */
+#developer{
+    font-size: min(6vw, 2.5rem);
+    padding: 0 5%;
+    color: white;
+    text-align: center;
+    user-select: none;
+    margin: auto 0;
+    position: relative;
+    left: 200%;
+    animation: swoop-in-right 1s ease 2.2s 1 normal forwards;
+}
+
+#click-me{
+    color: white;
+    font-size: min(1.3rem, 4.5vw);
+    position: absolute;
+    top: -13%;
+    left: -200%;
+    cursor: default;
+
+    transform: rotate(340deg);
+    animation: swoop-in-left 1s ease 2.2s 1 normal forwards;
+}
+
+@media screen and (max-width: 1240px) and (min-width: 930px) {
+    #click-me{
+        animation: swoop-in-left-smallscreen 1s ease 2.2s 1 normal forwards;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    #click-me{
+        top: -20%;
+    }
+}
+
+/* The animation of the letters dropping in at the beginning */
+@keyframes letter-drop {
+    from {top: -700%;}
+    to {top: 0;}
+}
+
+/* The animation for "full stack developer" to swoop in from the right */
+@keyframes swoop-in-right {
+    from {left: 200%;}
+    to {left: 0;}
+}
+/* 
+@keyframes rotation {
+    from {transform: rotate(339deg);}
+    to {transform: rotate(341deg);}
+} */
+
+/* The animation for "click me" to swoop in from the left */
+@keyframes swoop-in-left {
+    from {left: -200%;}
+    to {left: 5.5%;}
+}
+
+@keyframes swoop-in-left-smallscreen {
+    from {left: -200%;}
+    to {left: 20%;}
+}
+
+/* Bopping up the letters */
+@keyframes letter-up {
+    0% {top: 0;}
+    100% {top: -15%;}
+}
