@@ -1,0 +1,147 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>phys 159 thingy</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <form onsubmit="event.preventDefault(); calculate()">
+        <h1 id="title">Jawad's Fancy Calculus Calculator V2</h1>
+        <div class="mainContainer">
+            <div class="first">
+                <div class="inputContainer">
+                    <label>x_lever (m)</label>
+                    <input inputmode="decimal" step="any" id="x_lever" type="number">
+                </div>
+                <div class="inputContainer">
+                    <label>x_lever uncertainty (m)</label>
+                    <input inputmode="decimal" step="any" id="del_x_lever" type="number">
+                </div>
+
+                <div class="inputContainer">
+                    <label>x_stand (m)</label>
+                    <input inputmode="decimal" step="any" id="x_stand" type="number">
+                </div>
+                <div class="inputContainer">
+                    <label>x_stand uncertainty (m)</label>
+                    <input inputmode="decimal" step="any" id="del_x_stand" type="number">
+                </div>
+
+                <div class="inputContainer">
+                    <label>x_extra (m)</label>
+                    <input inputmode="decimal" step="any" id="x_extra" type="number">
+                </div>
+                <div class="inputContainer">
+                    <label>x_extra uncertainty (m)</label>
+                    <input inputmode="decimal" step="any" id="del_x_extra" type="number">
+                </div>
+
+                <div class="inputContainer">
+                    <label>m_lever (kg)</label>
+                    <input inputmode="decimal" step="any" id="m_lever" type="number">
+                </div>
+                <div class="inputContainer">
+                    <label>m_lever uncertainty (kg)</label>
+                    <input inputmode="decimal" step="any" id="del_m_lever" type="number">
+                </div>
+
+                <div class="inputContainer">
+                    <label>m_stand (kg)</label>
+                    <input inputmode="decimal" step="any" id="m_stand" type="number">
+                </div>
+                <div class="inputContainer">
+                    <label>m_stand uncertainty (kg)</label>
+                    <input inputmode="decimal" step="any" id="del_m_stand" type="number">
+                </div>
+                
+                <div class="inputContainer">
+                    <label>m_extra (kg)</label>
+                    <input inputmode="decimal" step="any" id="m_extra" type="number">
+                </div>
+                <div class="inputContainer">
+                    <label>m_extra uncertainty (kg)</label>
+                    <input inputmode="decimal" step="any" id="del_m_extra" type="number">
+                </div>
+            </div>
+
+            <div class="second">
+                <h3>Applied Force (N)</h3>
+                <p class="calc" id="app_force">&nbsp;</p>
+                <h3>Applied Force Uncertainty (N)</h3>
+                <p class="calc" id="del_app_force">&nbsp;</p>
+            </div>
+
+            <p class="error" id="error_1">&nbsp;</p>
+            <button type="submit">Calculate</button>
+        </div>
+        
+        <div class="mainContainer">
+            <div class="first third">
+                <div class="inputContainer">
+                    <label>slope (*10^-6 N*m^3)</label>
+                    <input inputmode="decimal" step="any" id="slope" type="number">
+                </div>
+                <div class="inputContainer">
+                    <label>slope uncertainty (*10^-6 N*m^3)</label>
+                    <input inputmode="decimal" step="any" id="del_slope" type="number">
+                </div>
+
+                <div class="inputContainer">
+                    <label>initial volume (*10^-6 m^3)</label>
+                    <input inputmode="decimal" step="any" id="volume" type="number">
+                </div>
+                <div class="inputContainer">
+                    <label>initial volume uncertainty (*10^-6 m^3)</label>
+                    <input inputmode="decimal" step="any" id="del_volume" type="number">
+                </div>
+
+                <div class="inputContainer">
+                    <label>temperature (K)</label>
+                    <input inputmode="decimal" step="any" id="temp" type="number">
+                </div>
+                <div class="inputContainer">
+                    <label>temperature uncertainty (K)</label>
+                    <input inputmode="decimal" step="any" id="del_temp" type="number">
+                </div>
+
+                <div class="inputContainer">
+                    <label>area (*10^-4 m^2)</label>
+                    <input inputmode="decimal" step="any" id="area" type="number">
+                </div>
+                <div class="inputContainer">
+                    <label>area uncertainty (*10^-4 m^2)</label>
+                    <input inputmode="decimal" step="any" id="del_area" type="number">
+                </div>
+
+                <div class="inputContainer">
+                    <label>y-intercept (N)</label>
+                    <input inputmode="decimal" step="any" id="y_int" type="number">
+                </div>
+                <div class="inputContainer">
+                    <label>y-intercept uncertainty (N)</label>
+                    <input inputmode="decimal" step="any" id="del_y_int" type="number">
+                </div>
+            </div>
+
+            <div class="second">
+                <h3>Molar Density (kg/m^3)</h3>
+                <p class="calc" id="molar_density">&nbsp;</p>
+                <h3>Molar Density Uncertainty (kg/m^3)</h3>
+                <p class="calc" id="del_molar_density">&nbsp;</p>
+
+                <h3>Atmospheric Pressure (kPa)</h3>
+                <p class="calc" id="pressure_atm">&nbsp;</p>
+                <h3>Atmospheric Pressure Uncertainty (kPa)</h3>
+                <p class="calc" id="del_pressure_atm">&nbsp;</p>
+            </div>
+
+            <p class="error" id="error_2">&nbsp;</p>
+            <button type="submit">Calculate</button>
+        </div>
+    </form> 
+    <script src="script.js"></script>    
+ </body>
+ </html>

@@ -1,0 +1,121 @@
+html{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;   
+}
+
+form{
+    box-sizing: border-box;
+    padding-bottom: 50px;
+}
+
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: min(14rem, 80%);
+    margin: 0.8rem;
+}
+
+label{
+    text-align: center;
+}
+
+input{
+    border: 1px solid black;
+    width: 100%;
+}
+
+button{
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid black;
+    padding: 0.7rem 1.4rem;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 4rem;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 1.3rem;
+    display: block;
+}
+
+button:hover{
+    opacity: 0.5;
+}
+
+#title{
+    width: min(20rem, 80%);
+    text-align: center;
+    margin: auto;
+    font-size: min(2rem, 9vw);
+    position: relative;
+}
+
+#title:after{
+    content: "and mike was here too :)";
+    position: absolute;
+    font-size: 0.75rem;
+    top: 3.4rem;
+    right: -8.75rem;
+}
+
+@media screen and (max-width: 650px) {
+    #title{
+        margin-bottom: 1rem;
+    }
+    
+    #title:after{
+        top: 110%;
+        right: 30%;
+        left: 30%;
+    }
+}
+
+.mainContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: space-around;
+}
+
+.first{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.second{
+    position: relative;
+    margin: 0 2rem;
+}
+
+.third{
+    margin: 2rem 5rem;
+}
+
+.calc{
+    margin-top: -1rem;
+    margin-bottom: 1.2rem;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+.error{
+    width: 100%;
+    text-align: center;
+    color: rgb(158, 7, 7);
+}
