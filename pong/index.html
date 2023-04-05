@@ -1,0 +1,143 @@
+<!-- 
+    Hii!
+
+    This is the first project I've made, please let me know if you
+    like it at jmakki.ca !
+
+    - Jawad Makki
+ -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Pong</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+    <script 
+        src="https://kit.fontawesome.com/ec9c0f4d39.js"
+        crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <div class="start-screen-container">
+        <h1 class="title">PONG</h1>
+        <div class="home-btns-container">
+            <button 
+                class="button play" 
+                onclick="play()">
+                PLAY
+            </button>
+            <button 
+                class="button settings" 
+                onclick="settings()">
+                SETTINGS
+            </button>
+        </div>
+    </div>
+
+    <div class="set-screen-container">
+        <button 
+            class="back-button" 
+            onclick="back()">
+            <i class='fas fa-angle-left'></i>
+        </button>
+
+        <div class="controls-container">
+            <h2 class="controls">CONTROLS</h2>
+
+            <button 
+                class="keys-btn button" 
+                onclick="controlSelect(event)">
+                ARROW KEYS
+            </button>
+            <button 
+                class="mouse-btn button" 
+                onclick="controlSelect(event)">
+                MOUSE
+            </button>
+            <button
+                class="touch-btn button"
+                onclick="controlSelect(event)">
+                TOUCH
+            </button>
+        </div>
+        <div class="diff-container">
+            <h2 class="difficulty">DIFFICULTY</h2>
+            
+            <button 
+                class="easy-btn button"
+                onclick="difficultySelect(event)">
+                EASY
+            </button>
+            <button 
+                class="medium-btn button"
+                onclick="difficultySelect(event)">
+                MEDIUM
+            </button>
+            <button 
+                class="hard-btn button"
+                onclick="difficultySelect(event)">
+                HARD
+            </button>
+            <button 
+                class="impossible-btn button"
+                onclick="difficultySelect(event)">
+                IMPOSSIBLE
+            </button>
+        </div>
+        <div class="disp-container">
+            <h2 class="display">DISPLAY</h2>
+            
+            <button 
+                class="dark-btn button"
+                onclick="darkMode()">
+                DARK MODE
+            </button>
+            <button 
+                class="light-btn button"
+                onclick="lightMode()">
+                LIGHT MODE
+            </button>
+        </div>
+    </div>
+    
+    <div class="game-container">
+        <canvas></canvas>
+        <h5 class="press-enter">PRESS ENTER</h5>
+        <button 
+            class="start-game-button"
+            onclick="startGame()">
+            START GAME
+        </button>
+        <button 
+            class="back-button-2" 
+            onclick="back(), pauseGame()">
+            <i class='fas fa-angle-left'></i>
+        </button>
+        <button 
+            class="pause-button"
+            onclick="pauseOrUnpause()">
+            <i class="fas fa-pause"></i>
+        </button>
+        <h3 class="left-score">0</h3>
+        <h3 class="right-score">0</h3>  
+    </div>
+
+    <div class="end-screen-container">
+        <h2 class="win-or-lose"></h2>
+        <button 
+            class="button home-button"
+            onclick="goHome()">
+            HOME
+        </button>
+    </div>
+
+    <script src="display.js"></script>
+    <script src="gameplay.js"></script>
+</body>
+
+</html>
