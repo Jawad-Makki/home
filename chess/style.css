@@ -11,6 +11,8 @@
     left: 3rem;
     width: 10rem;
     min-height: 10vh;
+    font: 2.25rem;
+    color: white;
 }
 
 :root {
