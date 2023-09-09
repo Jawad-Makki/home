@@ -23,6 +23,7 @@
     <link href="style.css" rel="stylesheet" type="text/css"/>
     <link href="name.css" rel="stylesheet" type="text/css"/>
     <link href="about-me.css" rel="stylesheet" type="text/css"/>
+    <link href="projects.css" rel="stylesheet" type="text/css"/>
 
     <script src="https://kit.fontawesome.com/ec9c0f4d39.js" crossorigin="anonymous"></script>
     
@@ -93,7 +94,7 @@
 
     <div class="container" id="portfolio-container">
         <div class="background" id="portfolio-bg">
-            <h3 class="my-projects">My Projects</h3>
+            <h3 class="my-projects">My Coding Projects</h3>
             <div class="portfolio-grid">
                 <div class="site-container">
                     <button class="site-btn" onclick="window.location='./pong'">
@@ -105,8 +106,76 @@
                         <img class="site" src="chess-logo.png" alt="CHESS">
                     </button>
                 </div>
+                <div class="site-container">
+                    <form action="https://indigenous-peoples-day.jmakki.ca">
+                        <button class="site-btn" type="submit">
+                            <h5>Indigenous Peoples Day 2022</h5>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
+    </div>
+    <div class="container" id="mech-portfolio-container">
+        <div class="background" id="mech-portfolio-bg">
+            <h3 class="my-other-projects">My Other Projects</h3>
+            <div class="all-projects">
+                <div class="project-container" id="claw-container">
+                    <h3 class="project-title">Autonomous Claw</h3>
+                    <div class="project">
+                        <p class="project-description">
+                            In the course APSC 101, my team and I designed two autonomous claws to accomplish a few tasks such as picking up a wide vairety of objects.
+                            Our claws were very successful in terms of versatility, accuracy, and speed!
+                        </p>
+                        <div class="photos">
+                            <img class="project-photo" src="claw-photo-2.jpg" alt="Photo of a Claw">   
+                            <img class="project-photo" src="claw-photo-1.jpg" alt="Photo of another Claw">
+                        </div>
+                    </div>
+                </div>
+
+                <button class="project-btn" id="arrow-one" onclick="switchProjectOne()">
+                    <i class="fas fa-angle-right" aria-hidden="true"></i>
+                </button>
+                
+                <div class="project-container" id="chair-container">
+                    <h3 class="project-title">Cardboard Chair</h3>
+                    <div class="project">
+                        <p class="project-description">
+                            The very first project in engineering at UBC is to build a chair made of cardboard!
+                            My team and I set a heavy focus on limiting use of cardboard and strength of the chair.
+                            We also ensured that it would be simple to assemble.
+                        </p>
+                        <div class="photos">
+                            <img class="project-photo" src="chair-photo-2.jpg" alt="Photo of the cardboard chair">   
+                            <img class="project-photo" src="chair-photo-1.jpg" alt="Photo of the chair unfolded">
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="project-btn" id="arrow-two" onclick="switchProjectTwo()">
+                    <i class="fas fa-angle-right" aria-hidden="true"></i>
+                </button>
+
+                <div class="project-container" id="egg-container">
+                    <h3 class="project-title">Amusement Park Ride For An Egg</h3>
+                    <div class="project">
+                        <p class="project-description">
+                            In grade 12, I was the team captain of my APEGA Science Olympics team. 
+                            We designed and constructed a swings ride for eggs that uses reused and recycled materials!
+                            We did really well in functionality, as well as analysis of the physics of the ride.
+                        </p>
+                        <div class="photos">
+                            <img class="project-photo" src="swings-photo-2.jpg" alt="Photo of the swings ride">   
+                            <img class="project-photo" src="swings-photo-1.jpg" alt="Another photo of the swings ride">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="white-strip"></div>
     </div>
 
     <div class="container" id="contact-container">
@@ -133,5 +202,6 @@
     <script src="colors.js"></script>
     <script src="timer.js"></script>
     <script src="name.js"></script>
+    <script src="projects.js"></script>
 </body>
 </html>
