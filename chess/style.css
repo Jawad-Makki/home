@@ -5,6 +5,14 @@
     user-select: none;
 }
 
+#work-in-progress{
+    position: absolute;
+    top: 40vh;
+    left: 3rem;
+    width: 10rem;
+    min-height: 10vh;
+}
+
 :root {
     --board-length: min(calc(96svh + 16px), calc(96svw + 16px));
     --square-length: min(12svh, 12svw);
