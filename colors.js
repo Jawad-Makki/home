@@ -11,10 +11,17 @@ const nameBg = document.getElementById("name-bg");
 const portfolioContainer = document.getElementById("portfolio-container");
 const portfolioBg = document.getElementById("portfolio-bg");
 
+const mechPortfolioContainer = document.getElementById("mech-portfolio-container");
+const mechPortfolioBg = document.getElementById("mech-portfolio-bg");
+
 const contactContainer = document.getElementById("contact-container");
 const contactBg = document.getElementById("contact-bg");
 
+const email = document.querySelector(".email");
+const myEmail = document.querySelector(".my-email");
+
 const myProjects = document.querySelector(".my-projects");
+const whiteStrip = document.querySelector(".white-strip");
 
 const btnContainer = document.querySelector(".btns-container");
 const palette = document.querySelector(".palette");
@@ -70,7 +77,8 @@ function darkMode () {
 function redMode () {
     nameBg.style.background = "rgb(120, 20, 2)";
     portfolioContainer.style.background = "rgb(120, 20, 2)";
-    contactBg.style.background = "rgb(120, 20, 2)";
+    mechPortfolioBg.style.background = "rgb(120, 20, 2)";
+    contactContainer.style.background = "rgb(120, 20, 2)";
 
     isRedMode = true;
     darkOrLightColors();
@@ -80,7 +88,8 @@ function redMode () {
 function blueMode () {
     nameBg.style.background = "rgb(10, 116, 109)";
     portfolioContainer.style.background = "rgb(10, 116, 109)";
-    contactBg.style.background = "rgb(10, 116, 109)";
+    mechPortfolioBg.style.background = "rgb(10, 116, 109)";
+    contactContainer.style.background = "rgb(10, 116, 109)";
 
     isRedMode = false;
     darkOrLightColors();
@@ -89,31 +98,47 @@ function blueMode () {
 function darkOrLightColors () {
     
     if (isDarkMode == true) {
-        
         myProjects.style.color = "white";
+        email.style.color = "rgba(255, 255, 255, 0.9)";
+        myEmail.style.color = "rgba(255, 255, 255, 0.9)";
+        codingFor.style.color = "rgba(255, 255, 255, 0.9)";
 
         if (isRedMode == true) {
             nameContainer.style.background = "rgb(30, 2, 2)";
             portfolioBg.style.background = "rgb(30, 2, 2)";
-            contactContainer.style.background = "rgb(30, 2, 2)";
+            mechPortfolioContainer.style.background = "rgb(30, 2, 2)";
+            contactBg.style.background = "rgb(30, 2, 2)";
+            whiteStrip.style.background = "rgb(30, 2, 2)";
         }
 
         else {
             nameContainer.style.background = "rgb(2, 35, 43)";
             portfolioBg.style.background = "rgb(2, 35, 43)";
-            contactContainer.style.background = "rgb(2, 35, 43)";
+            mechPortfolioContainer.style.background = "rgb(2, 35, 43)";
+            contactBg.style.background = "rgb(2, 35, 43)";
+            whiteStrip.style.background = "rgb(2, 35, 43)";
         }
     }
 
     else {
-        if (isRedMode == true)
+        if (isRedMode == true) {
             myProjects.style.color = "rgb(35, 2, 2)";
+            email.style.color = "rgb(35, 2, 2)";
+            myEmail.style.color = "rgb(35, 2, 2)";
+            codingFor.style.color = "rgb(35, 2, 2)";
+        }
         
-        else
+        else {
             myProjects.style.color = "rgb(0, 26, 24)";
+            email.style.color = "rgb(0, 26, 24)";
+            myEmail.style.color = "rgb(0, 26, 24)";
+            codingFor.style.color = "rgb(7, 54, 50)";
+        }
 
         nameContainer.style.background = "white";
         portfolioBg.style.background = "white";
-        contactContainer.style.background = "white";
+        mechPortfolioContainer.style.background = "white";
+        contactBg.style.background = "white";
+        whiteStrip.style.background = "white";
     }
 }
