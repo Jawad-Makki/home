@@ -1,0 +1,50 @@
+
+@keyframes arrow-leave-left {
+    from {left: 12%;}
+    to {left: -200%;}
+}
+
+@keyframes arrow-leave-right {
+    from {left: 95%;}
+    to {left: 200%;}
+}
+
+@keyframes arrow-enter-left {
+    from {left: -200%;}
+    to {left: 12%;}
+}
+
+@keyframes arrow-enter-right {
+    from {left: 200%;}
+    to {left: 95%;}
+}
+
+@keyframes arrow-move-left {
+    from {left: 95%;}
+    to {left: 12%;}
+}
+
+@keyframes arrow-move-right {
+    from {left: 12%;}
+    to {left: 95%;}
+}
+
+@keyframes project-leave-left {
+    from {left: 0;}
+    to {left: -200%;}
+}
+
+@keyframes project-leave-right {
+    from {left: 0;}
+    to {left: 200%;}
+}
+
+@keyframes project-enter-left {
+    from {left: -200%;}
+    to {left: 0;}
+}
+
+@keyframes project-enter-right {
+    from {left: 200%;}
+    to {left: 0;}
+}
