@@ -233,6 +233,10 @@ canvas {
     font-size: min(3rem, 8vw);
 }
 
+.fas {
+    font-size: 99%;
+}
+
 @media all and (orientation:portrait) {
     .left-score, .right-score {
         font-size: 5rem;
