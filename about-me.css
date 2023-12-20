@@ -1,0 +1,107 @@
+
+.about-me-btn{
+    background: transparent;
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    right: -200%;
+    top: 40%;
+    cursor: pointer;
+    animation: come-in 1s ease 2.2s 1 normal forwards;
+}
+
+.about-me-container{
+    position: absolute;
+    left: 200%;
+    width: 100%;
+    min-height: 75%;
+    top: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-me{
+    color: white;
+    width: 35rem;
+    margin: 2rem;
+    margin-top: 0;
+    font-size: 1.4rem;
+    
+}
+
+.photo-of-me{
+    width: min(25%, 20rem);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+@keyframes come-in {
+    from {right: -200%;}
+    to {right: 1.2rem;}
+}
+
+@keyframes move-left {
+    from {right: 1.2rem;}
+    to {right: calc(100% - 2rem);}
+}
+
+@keyframes move-right {
+    from {right: calc(100% - 2rem);}
+    to {right: 1.2rem;}
+}
+
+@keyframes leave-sight-left {
+    from {left: 0;}
+    to {left: -200%;}
+}
+
+@keyframes leave-sight-right {
+    from {left: 2rem;}
+    to {left: 200%;}
+}
+
+@keyframes enter-sight-left {
+    from {left: -200%;}
+    to {left: 0;}
+}
+
+@keyframes enter-sight-right {
+    from {left: 200%;}
+    to {left: 2rem;}
+}
+
+@media screen and (max-width: 1150px) {
+    .photo-of-me{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .about-me-btn{
+        top: 8%;
+    }
+
+    .about-me{
+        width: 100%;
+        margin: 0 2.5rem;
+        font-size: max(1.25rem, 3vw);
+    }
+
+    @keyframes leave-sight-right {
+        from {left: 0;}
+        to {left: 200%;}
+    }
+
+    @keyframes enter-sight-right {
+        from {left: 200%;}
+        to {left: 0;}
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .about-me{
+        margin-right: 1rem;
+        font-size: min(1.25rem, 4vw);
+    }
+}
