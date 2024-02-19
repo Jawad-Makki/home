@@ -8,6 +8,7 @@ var endTime;
 
 function setup () {
     mic = new p5.AudioIn();
+    getAudioContext().resume();
 }
 
 function draw () {
