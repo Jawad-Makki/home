@@ -1,6 +1,7 @@
 const recordButton = document.getElementById("record-button");
 const time = document.getElementById("time");
 
+var song;
 var mic;
 var recording = false;
 var startTime;
@@ -8,6 +9,7 @@ var endTime;
 
 function setup () {
     mic = new p5.AudioIn();
+    song = loadSound('race-start-beeps.mp3');
 }
 
 function draw () {
@@ -16,7 +18,7 @@ function draw () {
         console.log(volume);
 
         if (volume > 0.02) {
-            startOrStop();
+            stop();
         }
 
         if (startTime != null && endTime == null) {
@@ -34,18 +36,27 @@ function toggleRecording () {
         recordButton.innerHTML = "Stop Recording";    
         getAudioContext().resume();
         mic.start();
+        playStartSound();
+        setTimeout(() => {
+            start();
+        }, 4000);
     }
 
     recording = !recording;
 }
 
-function startOrStop () {
-    if (startTime == null) {
-        startTime = new Date().getTime();
-    } else {
-        endTime = new Date().getTime();
-        time.innerHTML = (endTime - startTime) / 1000;
-    }
+function playStartSound () {
+    song.play();
+}
+
+function start () {
+    startTime = new Date().getTime();
+    time.innerHTML = 0;
+}
+
+function stop () {
+    endTime = new Date().getTime();
+    time.innerHTML = (endTime - startTime) / 1000;
 }
 
 function reset () {
