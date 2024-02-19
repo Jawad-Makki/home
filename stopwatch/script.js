@@ -41,8 +41,9 @@ function toggleRecording () {
         mic.start();
         song.play();
         setTimeout(() => {
+            song.stop();
             start();
-        }, 4000);
+        }, 3500);
     }
 
     recording = !recording;
