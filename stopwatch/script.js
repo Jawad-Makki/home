@@ -8,10 +8,6 @@ var endTime;
 
 function setup () {
     mic = new p5.AudioIn();
-    
-    if (recording) {
-        mic.start();
-    }
 }
 
 function draw () {
@@ -36,6 +32,7 @@ function toggleRecording () {
         mic.stop();
     } else {
         recordButton.innerHTML = "Stop Recording";
+        mic.start();
     }
 
     recording = !recording;
