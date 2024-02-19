@@ -15,7 +15,7 @@ function draw () {
         var volume = mic.getLevel();
         console.log(volume);
 
-        if (volume > 0.2) {
+        if (volume > 0.02) {
             startOrStop();
         }
 
