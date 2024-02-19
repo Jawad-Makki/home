@@ -7,9 +7,12 @@ var recording = false;
 var startTime;
 var endTime;
 
+function preload () {
+    song = loadSound('race-start-beeps.mp3');
+}
+
 function setup () {
     mic = new p5.AudioIn();
-    song = loadSound('race-start-beeps.mp3');
 }
 
 function draw () {
@@ -36,17 +39,13 @@ function toggleRecording () {
         recordButton.innerHTML = "Stop Recording";    
         getAudioContext().resume();
         mic.start();
-        playStartSound();
+        song.play();
         setTimeout(() => {
             start();
         }, 4000);
     }
 
     recording = !recording;
-}
-
-function playStartSound () {
-    song.play();
 }
 
 function start () {
