@@ -402,7 +402,8 @@ body, html{
         padding-left: 2%;
     }
 
-    .photos, #enph353-photo, #pong-photo-container, #chess-photo-container{
+    .photos, #enph353-photo, #pong-photo-container, #chess-photo-container, 
+    #claw-photos-container, #chair-photos-container, #egg-photos-container{
         width: 98%;
         align-self: center;
     }
