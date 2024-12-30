@@ -7,7 +7,7 @@
     right: -200%;
     top: 40%;
     cursor: pointer;
-    animation: come-in 1s ease 2.2s 1 normal forwards;
+    animation: come-in 1s ease 0s 1 normal forwards;
 }
 
 .about-me-container{
@@ -27,7 +27,6 @@
     margin: 2rem;
     margin-top: 0;
     font-size: 1.4rem;
-    
 }
 
 .photo-of-me{
@@ -75,6 +74,10 @@
     .photo-of-me{
         display: none;
     }
+
+    .about-me{
+        margin-top: -4rem;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -85,6 +88,7 @@
     .about-me{
         width: 100%;
         margin: 0 2.5rem;
+        margin-top: -4rem;
         font-size: max(1.25rem, 3vw);
     }
 

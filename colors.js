@@ -5,23 +5,6 @@
 //
 
 // Getting all of the background/container elements
-const nameContainer = document.getElementById("name-container");
-const nameBg = document.getElementById("name-bg");
-
-const portfolioContainer = document.getElementById("portfolio-container");
-const portfolioBg = document.getElementById("portfolio-bg");
-
-const otherPortfolioContainer = document.getElementById("other-portfolio-container");
-const otherPortfolioBg = document.getElementById("other-portfolio-bg");
-
-const contactContainer = document.getElementById("contact-container");
-const contactBg = document.getElementById("contact-bg");
-
-const email = document.querySelector(".email");
-const myEmail = document.querySelector(".my-email");
-
-const myProjects = document.querySelector(".my-projects");
-const whiteStrip = document.querySelector(".white-strip");
 
 const btnContainer = document.querySelector(".btns-container");
 const palette = document.querySelector(".palette");
@@ -32,10 +15,25 @@ const btnGroup = document.getElementsByClassName("button-group");
 var isRedMode = false;
 var isDarkMode = false;
 
-// Start or stop displaying the buttons
-window.addEventListener("click", (e) => {
-    if (e.target != palette && e.target != btnContainer) {
-        
+const RED = "rgb(80, 20, 2)";
+const TEAL = "rgb(10, 116, 109)";
+const WHITE = "white";
+const BLACK = "black";
+const LIGHT_GRAY = "rgb(180, 183, 182)";
+const DARK_GRAY = "rgb(70, 78, 76)";
+const RED_BLACK = "rgb(30, 2, 2)";
+const TEAL_BLACK = "rgb(2, 35, 43)";
+const TEAL_PROGRESS_CIRCLE = "rgb(184, 218, 213)";
+const TEAL_SELECTED_PROGRESS_CIRCLE = "rgb(136, 165, 162)";
+const RED_PROGRESS_CIRCLE = "rgb(218, 184, 184)";
+const RED_SELECTED_PROGRESS_CIRCLE = "rgb(150, 120, 120)";
+
+var r = document.querySelector(':root');
+// r.style.setProperty('--teal', 'lightblue');
+
+// Start or stop displaying the 
+window.addEventListener("cbuttonslick", (e) => {
+    if (e.target != palette && e.target != btnContainer) {        
         for (i = 0; i < colorBtns.length; i++)
             if (e.target == colorBtns[i])
                 return;
@@ -75,22 +73,14 @@ function darkMode () {
 
 // If the button to change it to red mode is clicked
 function redMode () {
-    nameBg.style.background = "rgb(80, 20, 2)";
-    portfolioContainer.style.background = "rgb(80, 20, 2)";
-    otherPortfolioBg.style.background = "rgb(80, 20, 2)";
-    contactContainer.style.background = "rgb(80, 20, 2)";
-
+    r.style.setProperty('--teal', RED);
     isRedMode = true;
     darkOrLightColors();
 }
 
 // If the button to change it to blue mode is clicked
 function blueMode () {
-    nameBg.style.background = "rgb(10, 116, 109)";
-    portfolioContainer.style.background = "rgb(10, 116, 109)";
-    otherPortfolioBg.style.background = "rgb(10, 116, 109)";
-    contactContainer.style.background = "rgb(10, 116, 109)";
-
+    r.style.setProperty('--teal', TEAL);
     isRedMode = false;
     darkOrLightColors();
 }
@@ -98,48 +88,37 @@ function blueMode () {
 function darkOrLightColors () {
     
     if (isDarkMode == true) {
-        myProjects.style.color = "white";
-        email.style.color = "rgba(255, 255, 255, 0.9)";
-        myEmail.style.color = "rgba(255, 255, 255, 0.9)";
-        codingFor.style.color = "rgba(255, 255, 255, 0.9)";
-        
+        r.style.setProperty('--dark-letters', WHITE);
+        r.style.setProperty('--alt-dark-letters', LIGHT_GRAY);
+        r.style.setProperty('--black', WHITE);
 
         if (isRedMode == true) {
-            nameContainer.style.background = "rgb(30, 2, 2)";
-            portfolioBg.style.background = "rgb(30, 2, 2)";
-            otherPortfolioContainer.style.background = "rgb(30, 2, 2)";
-            contactBg.style.background = "rgb(30, 2, 2)";
-            whiteStrip.style.background = "rgb(30, 2, 2)";
+            r.style.setProperty('--white', RED_BLACK);
+            r.style.setProperty('--progress-circles', RED_SELECTED_PROGRESS_CIRCLE);
+            r.style.setProperty('--selected-progress-circle', RED_PROGRESS_CIRCLE);
         }
 
         else {
-            nameContainer.style.background = "rgb(2, 35, 43)";
-            portfolioBg.style.background = "rgb(2, 35, 43)";
-            otherPortfolioContainer.style.background = "rgb(2, 35, 43)";
-            contactBg.style.background = "rgb(2, 35, 43)";
-            whiteStrip.style.background = "rgb(2, 35, 43)";
+            r.style.setProperty('--white', TEAL_BLACK);
+            r.style.setProperty('--progress-circles', TEAL_SELECTED_PROGRESS_CIRCLE);
+            r.style.setProperty('--selected-progress-circle', TEAL_PROGRESS_CIRCLE);
         }
     }
 
     else {
-        if (isRedMode == true) {
-            myProjects.style.color = "rgb(35, 2, 2)";
-            email.style.color = "rgb(35, 2, 2)";
-            myEmail.style.color = "rgb(35, 2, 2)";
-            codingFor.style.color = "rgb(35, 2, 2)";
-        }
-        
-        else {
-            myProjects.style.color = "rgb(0, 26, 24)";
-            email.style.color = "rgb(0, 26, 24)";
-            myEmail.style.color = "rgb(0, 26, 24)";
-            codingFor.style.color = "rgb(7, 54, 50)";
-        }
+        r.style.setProperty('--dark-letters', BLACK);
+        r.style.setProperty('--alt-dark-letters', DARK_GRAY);
+        r.style.setProperty('--white', WHITE);
+        r.style.setProperty('--black', BLACK);
 
-        nameContainer.style.background = "white";
-        portfolioBg.style.background = "white";
-        otherPortfolioContainer.style.background = "white";
-        contactBg.style.background = "white";
-        whiteStrip.style.background = "white";
+        if (isRedMode == true) {
+            r.style.setProperty('--progress-circles', RED_PROGRESS_CIRCLE);
+            r.style.setProperty('--selected-progress-circle', RED_SELECTED_PROGRESS_CIRCLE);
+        }
+    
+        else {
+            r.style.setProperty('--progress-circles', TEAL_PROGRESS_CIRCLE);
+            r.style.setProperty('--selected-progress-circle', TEAL_SELECTED_PROGRESS_CIRCLE);
+        }
     }
 }

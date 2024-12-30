@@ -36,7 +36,7 @@ var wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 window.addEventListener("load", () => {
 
     // Drops down the letters
-    for (i = 0, time = 2; i < letters1.length; i++, time -= 0.15) {
+    for (i = 0, time = 0.5; i < letters1.length; i++, time -= 0.02) {
         letters1[i].style.animation = "letter-drop 0.6s ease " + time + "s 1 normal forwards";
     }
     
@@ -68,7 +68,6 @@ window.addEventListener("click", (e) => {
         return;
 
     correctArray(e.target);
-
 
     if (window.innerWidth > 1240) {      
         letterLoop(letters1);

@@ -16,6 +16,12 @@
     left: 0;
 }
 
+@media screen and (max-width: 600px) {
+    #full-name{
+        top: 2rem;
+    }
+}
+
 /* The containers for the letters in the first name and the container for letters in the last name */
 .first-name, .last-name{
     display: flex;
@@ -35,7 +41,6 @@
     -webkit-tap-highlight-color: rgb(0, 0, 0, 0);
 }
 
-/* Full stack developer element */
 #developer{
     font-size: min(6vw, 2.5rem);
     padding: 0 5%;
@@ -45,7 +50,7 @@
     margin: auto 0;
     position: relative;
     left: 200%;
-    animation: swoop-in-right 1s ease 2.2s 1 normal forwards;
+    animation: swoop-in-right 1s ease 0.5s 1 normal forwards;
 }
 
 #click-me{
@@ -57,7 +62,7 @@
     cursor: default;
     user-select: none;
     transform: rotate(340deg);
-    animation: swoop-in-left 1s ease 2.2s 1 normal forwards;
+    animation: swoop-in-left 1s ease 0.3s 1 normal forwards;
 }
 
 @media screen and (max-width: 1240px) and (min-width: 930px) {
@@ -72,13 +77,11 @@
     }
 }
 
-/* The animation of the letters dropping in at the beginning */
 @keyframes letter-drop {
     from {top: -700%;}
     to {top: 0;}
 }
 
-/* The animation for "full stack developer" to swoop in from the right */
 @keyframes swoop-in-right {
     from {left: 200%;}
     to {left: 0;}

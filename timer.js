@@ -54,7 +54,7 @@ function updateTime () {
         codingFor.innerHTML = "been coding for " + years + " year and " + months + " month";
         
         if (years != 1)
-            codingFor =  "been coding for " + years + " years and " + months + " month";
+            codingFor.innerHTML =  "been coding for " + years + " years and " + months + " month";
         
         if (months != 1)
             codingFor.innerHTML += "s";

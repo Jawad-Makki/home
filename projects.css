@@ -1,32 +1,32 @@
 
 @keyframes arrow-leave-left {
-    from {left: 12%;}
+    from {left: 10%;}
     to {left: -200%;}
 }
 
 @keyframes arrow-leave-right {
-    from {left: 92%;}
+    from {left: 88%;}
     to {left: 200%;}
 }
 
 @keyframes arrow-enter-left {
     from {left: -200%;}
-    to {left: 12%;}
+    to {left: 10%;}
 }
 
 @keyframes arrow-enter-right {
     from {left: 200%;}
-    to {left: 92%;}
+    to {left: 88%;}
 }
 
 @keyframes arrow-move-left {
-    from {left: 92%;}
-    to {left: 12%;}
+    from {left: 88%;}
+    to {left: 10%;}
 }
 
 @keyframes arrow-move-right {
-    from {left: 12%;}
-    to {left: 92%;}
+    from {left: 10%;}
+    to {left: 88%;}
 }
 
 @keyframes project-leave-left {

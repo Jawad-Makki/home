@@ -1,25 +1,14 @@
 <!-- 
-    Hiii!! I'm Jawad Makki.
+    Hi!! I'm Jawad Makki.
     
     This is my website, and I have worked very hard on it. 
     If anything can be improved please let me know using the 
     email me section!
-
-    Enjoy!
  -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "lgbwcqk24w");
-    </script>
-    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -74,10 +63,10 @@
                     <br><br>
                     I'm Jawad, and I made this website from scratch with HTML, CSS, and Javascript.
                     <br>
-                    I have worked very hard on it, and if you have any feedback I would love to hear it!
+                    If you have any feedback I would love to hear it!
                     You can contact me using the email provided in the "Email Me" section below.
                     <br><br>
-                    I am currently in my second year Engineering Physics at UBC!
+                    I am currently in my third year Engineering Physics at UBC!
                     
                     In my free time, I love to code, spend time with friends and family, 
                     or volunteer with the UBC Engineering community!
@@ -97,53 +86,103 @@
                 </div>
             </div>
 
-            <h3 id="developer">engineering student</h3>
+            <h3 id="developer">3rd Year UBC Engineering Physics</h3>
         </div>
     </div>
 
     <div class="container" id="portfolio-container">
         <div class="background" id="portfolio-bg">
-            <h3 class="my-projects">My Coding Projects</h3>
-            <div class="portfolio-grid">
-                <div class="site-container">
-                    <button class="site-btn" onclick="window.location='./pong'">
-                        <img class="site" src="images\pong-logo.png" alt="PONG">
-                    </button>
-                </div>
-                <div class="site-container">
-                    <button class="site-btn" onclick="window.location='./chess'">
-                        <img class="site" src="images\chess-logo.png" alt="CHESS">
-                    </button>
-                </div>
-                <div class="site-container">
-                    <form action="https://indigenous-peoples-day.jmakki.ca">
-                        <button class="site-btn" type="submit">
-                            <h5>Indigenous Peoples Day 2022</h5>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container" id="other-portfolio-container">
-        <div class="background" id="other-portfolio-bg">
-            <h3 class="my-other-projects">My Other Projects</h3>
+            <h3 class="my-projects">My Projects</h3>
             <div class="all-projects">
+
+                <div class="project-container" id="enph253-container">
+                    <h3 class="project-title">Autonomous Robot Competition</h3>
+                    <div class="project">
+                        <p class="project-description" id="enph253-description">
+                            For the course ENPH 253, I designed and CAD modeled the entire chassis of a robot, then manufactured 
+                            and assembled the robot. The robot was tasked with constructing meals out of plastic food. I also 
+                            programmed the autonomy and functionality of the robot, allowing it to compete in the competition 
+                            without a human controlling it.
+                        </p>
+                        <div class="photos">
+                            <img class="project-photo photo-1" id="enph253-photo" src="images\enph253-photo-1.jpg" alt="Photo of a the Designed Robot">   
+                        </div>
+                    </div>
+                </div>
+
+                <button class="arrow" onclick="switchProject(event)">
+                    <i class="fas fa-angle-right" aria-hidden="true"></i>
+                </button>
+
+                <div class="project-container" id="enph353-container">
+                    <h3 class="project-title">Virtual Robot Competition</h3>
+                    <div class="project">
+                        <p class="project-description" id="enph353-description">
+                            For ENPH 353, I designed a deep Q-learning reinforcement learning program to control the 
+                            driving system of a virtual robot using the ROS in a Gazebo simulated world. 
+                            I designed the architecture of the deep Q-learning neural network and determined the hyperparameters 
+                            that lead to fastest training convergence and best validation performance.
+                        </p>
+                        <div class="photos">
+                            <img class="project-photo photo-1" id="enph353-photo" src="images\enph353-photo.png" alt="Photo of a the Compeition Simulation">   
+                        </div>
+                    </div>
+                </div>
+
+                <button class="arrow" onclick="switchProject(event)">
+                    <i class="fas fa-angle-right" aria-hidden="true"></i>
+                </button>
+
+                <div class="project-container" id="pong-container">
+                    <h3 class="project-title linked-title" onclick="window.location='./pong'">Pong</h3>
+                    <div class="project">
+                        <p class="project-description">
+                            As my first coding project to help me learn some basics of JavaScript, I decided to remake
+                            the game Pong! This project was a good introduction to logical decision making in programming.
+                        </p>
+                        <button class="photos site-btn" id="pong-photo-container" onclick="window.location='./pong'">
+                            <img class="project-photo photo-1 site" id="pong-photo" src="images\pong-photo.png" alt="Photo of Pong Gameplay">   
+                            <img class="project-photo photo-1" id="pong-photo-2" src="images\pong-photo-2.png" alt="Photo of Pong Gameplay">
+                        </button>
+                    </div>
+                </div>
+
+                <button class="arrow" onclick="switchProject(event)">
+                    <i class="fas fa-angle-right" aria-hidden="true"></i>
+                </button>
+            
+                <div class="project-container" id="chess-container">
+                    <h3 class="project-title linked-title" onclick="window.location='./chess'">Chess</h3>
+                    <div class="project">
+                        <p class="project-description">
+                            With chess being one of my hobbies and coding being another, I decided it would be a fun project to code
+                            a website for playing chess. I plan to some day create a chess AI bot to play against! 
+                        </p>
+                        <button class="photos site-btn" id="chess-photo-container" onclick="window.location='./chess'">
+                            <img class="project-photo photo-1 site" id="chess-photo" src="images\chess-photo.png" alt="Photo of Chess Gameplay">   
+                        </button>
+                    </div>
+                </div>
+
+                <button class="arrow" onclick="switchProject(event)">
+                    <i class="fas fa-angle-right" aria-hidden="true"></i>
+                </button>
+
                 <div class="project-container" id="claw-container">
-                    <h3 class="project-title">Autonomous Claw</h3>
+                    <h3 class="project-title">Autonomous Claws</h3>
                     <div class="project">
                         <p class="project-description">
                             In the course APSC 101, my team and I designed two autonomous claws to accomplish a few tasks such as picking up a wide variety of objects.
                             Our claws were very successful in terms of versatility, accuracy, and speed!
                         </p>
-                        <div class="photos">
+                        <div class="photos" id="claw-photos-container">
                             <img class="project-photo photo-1" src="images\claw-photo-2.jpg" alt="Photo of a Claw">   
                             <img class="project-photo photo-2" src="images\claw-photo-1.jpg" alt="Photo of another Claw">
                         </div>
                     </div>
                 </div>
 
-                <button class="project-btn" id="arrow-one" onclick="switchProjectOne()">
+                <button class="arrow" onclick="switchProject(event)">
                     <i class="fas fa-angle-right" aria-hidden="true"></i>
                 </button>
                 
@@ -155,14 +194,14 @@
                             My team and I set a heavy focus on limiting use of cardboard and on the strength of the chair.
                             We also ensured ease of use and assembly.
                         </p>
-                        <div class="photos">
+                        <div class="photos" id="chair-photos-container">
                             <img class="project-photo photo-1" src="images\chair-photo-2.jpg" alt="Photo of the cardboard chair">   
                             <img class="project-photo photo-2" src="images\chair-photo-1.jpg" alt="Photo of the chair unfolded">
                         </div>
                     </div>
                 </div>
                 
-                <button class="project-btn" id="arrow-two" onclick="switchProjectTwo()">
+                <button class="arrow" onclick="switchProject(event)">
                     <i class="fas fa-angle-right" aria-hidden="true"></i>
                 </button>
 
@@ -174,17 +213,26 @@
                             We designed and constructed a swings ride for eggs that uses reused and recycled materials!
                             We did really well in functionality, as well as analysis of the physics of the ride.
                         </p>
-                        <div class="photos">
+                        <div class="photos" id="egg-photos-container">
                             <img class="project-photo photo-1" src="images\swings-photo-2.jpg" alt="Photo of the swings ride">   
                             <img class="project-photo photo-2" src="images\swings-photo-1.jpg" alt="Another photo of the swings ride">
                         </div>
                     </div>
                 </div>
-                
+            </div>
+
+            <div class="project-progress">
+                <div class="progress-circle"></div>
+                <div class="progress-circle"></div>
+                <div class="progress-circle"></div>
+                <div class="progress-circle"></div>
+                <div class="progress-circle"></div>
+                <div class="progress-circle"></div>
+                <div class="progress-circle"></div>
             </div>
         </div>
 
-        <div class="white-strip"></div>
+        <div id="cover"></div>
     </div>
 
     <div class="container" id="contact-container">
